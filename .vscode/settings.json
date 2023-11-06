@@ -1,0 +1,10 @@
+{
+    "cmake.configureOnOpen": true,
+    "files.associations": {
+        "sockets.h": "c",
+        "esp_netif.h": "c",
+        "stdio.h": "c",
+        "sdkconfig.h": "c",
+        "esp_log.h": "c"
+    }
+}
