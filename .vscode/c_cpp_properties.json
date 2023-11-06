@@ -3,9 +3,6 @@
         {
             "name": "ESP32S3",
             "defines": [],
-            "compilerPath": "/usr/bin/gcc",
-            "cStandard": "c11",
-            "cppStandard": "c++11",
             "compileCommands": "${workspaceFolder}/build/compile_commands.json"
         }
     ],

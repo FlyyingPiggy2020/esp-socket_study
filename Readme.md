@@ -26,4 +26,14 @@ idf.py build flash monitor
     "version": 4
 }
 ```
+
+## 3.使用clang-format格式化代码
+安装clang-format插件
+```
+sudo apt install clang-format
+```
+在setting.json中加入,就会在保存的时候自动运行
+```
+"editor.formatOnSave": true
+```
 # 目录说明

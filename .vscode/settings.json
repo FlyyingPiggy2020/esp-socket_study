@@ -1,10 +1,15 @@
 {
     "cmake.configureOnOpen": true,
     "files.associations": {
+        "SConstruct": "python",
         "sockets.h": "c",
         "esp_netif.h": "c",
         "stdio.h": "c",
         "sdkconfig.h": "c",
-        "esp_log.h": "c"
-    }
+        "esp_log.h": "c",
+        "err.h": "c",
+        "lwip_napt.h": "c",
+        "sys.h": "c"
+    },
+    "editor.formatOnSave": true
 }
