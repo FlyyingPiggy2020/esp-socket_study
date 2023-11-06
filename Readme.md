@@ -3,15 +3,15 @@
 
 ## 1.使用USB编译下载
 
-'''
+```
 idf.py set-target esp32s3
 sudo chmod 777 /dev/ttyACM0
 idf.py build flash monitor
-'''
+```
 ## 2.配置智能提示
 
 使用生成的compile_commands.json配置智能提示,请在.vscode中配置
-'''
+```
 {
     "configurations": [
         {
@@ -25,5 +25,5 @@ idf.py build flash monitor
     ],
     "version": 4
 }
-'''
+```
 # 目录说明
