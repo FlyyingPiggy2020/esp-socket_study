@@ -4,7 +4,7 @@
  * @Author       : lxf
  * @Date         : 2023-11-06 13:56:40
  * @LastEditors  : flyyingpiggy2020 154562451@qq.com
- * @LastEditTime : 2023-11-06 14:42:17
+ * @LastEditTime : 2023-11-08 11:18:13
  * @Brief        : 连接wifi，借鉴wifi的例程
  */
 
@@ -18,7 +18,6 @@
 #include "esp_wifi.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/event_groups.h"
-#include "freertos/task.h"
 #include "lwip/inet.h"
 #include "lwip/netdb.h"
 #include "lwip/sockets.h"
@@ -29,6 +28,8 @@
 #endif
 #include "lwip/err.h"
 #include "lwip/sys.h"
+
+#include "socket_study_example.h"
 /*---------- macro ----------*/
 
 #define TAG                "connect_wifi"
@@ -64,6 +65,7 @@ static void wifi_event_handler(void *arg, esp_event_base_t event_base, int32_t e
         ESP_LOGI(TAG, "Got IP:" IPSTR, IP2STR(&event->ip_info.ip));
         s_retry_num = 0;
         xEventGroupSetBits(s_wifi_event_group, WIFI_CONNECTED_BIT);
+        _tcp_client_init();
     }
 }
 /**
